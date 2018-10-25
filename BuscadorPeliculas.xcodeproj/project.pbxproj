@@ -16,6 +16,10 @@
 		3D713E3B2180C83B00FE2A67 /* BuscadorPeliculasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D713E3A2180C83B00FE2A67 /* BuscadorPeliculasUITests.swift */; };
 		3D713E612180CC0F00FE2A67 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D713E542180CBF400FE2A67 /* Alamofire.framework */; };
 		3D713E622180CC0F00FE2A67 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3D713E542180CBF400FE2A67 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3DD3A07621824FD9001746A5 /* ListaPeliculasController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3A07521824FD9001746A5 /* ListaPeliculasController.swift */; };
+		3DD3A07F2182503F001746A5 /* Pelicula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3A07E2182503F001746A5 /* Pelicula.swift */; };
+		3DD3A08121825164001746A5 /* CeldaPeliculaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3A08021825164001746A5 /* CeldaPeliculaController.swift */; };
+		3DD3A08421825791001746A5 /* DatosPeliculas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DD3A08321825791001746A5 /* DatosPeliculas.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -120,6 +124,10 @@
 		3D713E3A2180C83B00FE2A67 /* BuscadorPeliculasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuscadorPeliculasUITests.swift; sourceTree = "<group>"; };
 		3D713E3C2180C83B00FE2A67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3D713E482180CBF400FE2A67 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = SOURCE_ROOT; };
+		3DD3A07521824FD9001746A5 /* ListaPeliculasController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaPeliculasController.swift; sourceTree = "<group>"; };
+		3DD3A07E2182503F001746A5 /* Pelicula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pelicula.swift; sourceTree = "<group>"; };
+		3DD3A08021825164001746A5 /* CeldaPeliculaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CeldaPeliculaController.swift; sourceTree = "<group>"; };
+		3DD3A08321825791001746A5 /* DatosPeliculas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatosPeliculas.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +186,10 @@
 				3D713E212180C83B00FE2A67 /* Assets.xcassets */,
 				3D713E232180C83B00FE2A67 /* LaunchScreen.storyboard */,
 				3D713E262180C83B00FE2A67 /* Info.plist */,
+				3DD3A07521824FD9001746A5 /* ListaPeliculasController.swift */,
+				3DD3A07E2182503F001746A5 /* Pelicula.swift */,
+				3DD3A08021825164001746A5 /* CeldaPeliculaController.swift */,
+				3DD3A08321825791001746A5 /* DatosPeliculas.swift */,
 			);
 			path = BuscadorPeliculas;
 			sourceTree = "<group>";
@@ -405,8 +417,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DD3A07F2182503F001746A5 /* Pelicula.swift in Sources */,
+				3DD3A07621824FD9001746A5 /* ListaPeliculasController.swift in Sources */,
+				3DD3A08421825791001746A5 /* DatosPeliculas.swift in Sources */,
 				3D713E1D2180C83900FE2A67 /* ViewController.swift in Sources */,
 				3D713E1B2180C83900FE2A67 /* AppDelegate.swift in Sources */,
+				3DD3A08121825164001746A5 /* CeldaPeliculaController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

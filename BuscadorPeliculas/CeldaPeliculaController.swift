@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import UIKit
+
+class CeldaPeliculaController : UITableViewCell {
+    @IBOutlet weak var lblNombre: UILabel!
+    @IBOutlet weak var lblAño: UILabel!
+    
+}
