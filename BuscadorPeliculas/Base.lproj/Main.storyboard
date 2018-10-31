@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -127,28 +128,36 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="75" id="BUu-6U-aqA" customClass="CeldaPeliculaController" customModule="BuscadorPeliculas" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellPelicula" rowHeight="75" id="BUu-6U-aqA" customClass="CeldaPeliculaController" customModule="BuscadorPeliculas" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="75"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BUu-6U-aqA" id="sOl-mb-ebd">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="74.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCg-jP-YjZ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OCg-jP-YjZ">
                                                     <rect key="frame" x="15" y="11" width="345" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPb-EL-b8l">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPb-EL-b8l">
                                                     <rect key="frame" x="15" y="40" width="171" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="VPb-EL-b8l" firstAttribute="top" secondItem="OCg-jP-YjZ" secondAttribute="bottom" constant="8" id="AjG-CT-93g"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="VPb-EL-b8l" secondAttribute="trailing" constant="174" id="SS4-kX-TQa"/>
+                                                <constraint firstItem="OCg-jP-YjZ" firstAttribute="leading" secondItem="sOl-mb-ebd" secondAttribute="leadingMargin" id="SkC-7a-F7H"/>
+                                                <constraint firstItem="VPb-EL-b8l" firstAttribute="leading" secondItem="sOl-mb-ebd" secondAttribute="leadingMargin" id="ZAi-IC-ird"/>
+                                                <constraint firstItem="OCg-jP-YjZ" firstAttribute="top" secondItem="sOl-mb-ebd" secondAttribute="topMargin" id="akb-Kn-fAg"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="VPb-EL-b8l" secondAttribute="bottom" constant="3" id="odf-6A-vOA"/>
+                                                <constraint firstItem="VPb-EL-b8l" firstAttribute="top" secondItem="OCg-jP-YjZ" secondAttribute="bottom" constant="8" id="rt0-Uh-EB7"/>
+                                                <constraint firstItem="OCg-jP-YjZ" firstAttribute="trailing" secondItem="sOl-mb-ebd" secondAttribute="trailingMargin" id="ukJ-Hb-HbA"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="lblAño" destination="VPb-EL-b8l" id="dPd-Ld-fLQ"/>
@@ -156,6 +165,10 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="VZ7-3c-qDd" id="mhY-oA-s3f"/>
+                                    <outlet property="delegate" destination="VZ7-3c-qDd" id="JH2-kC-4wl"/>
+                                </connections>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GLW-Mh-hlx">
                                 <rect key="frame" x="16" y="20" width="343" height="30"/>

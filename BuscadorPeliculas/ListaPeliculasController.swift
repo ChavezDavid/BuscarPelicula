@@ -18,13 +18,28 @@ class ListaPeliculasController : UIViewController, UITableViewDataSource, UITabl
     var pelicula : String = ""
     var encontrada : String = ""
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return DatosPeliculas.peliculas.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let celda = tableView.dequeueReusableCell(withIdentifier: "cellPelicula") as! CeldaPeliculaController
+        celda.lblNombre.text = DatosPeliculas.peliculas[indexPath.row].nombre
+        celda.lblAño.text = DatosPeliculas.peliculas[indexPath.row].año
+        return celda
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 90
+    }
+    
     @IBAction func doTapBuscar(_ sender: Any) {
         pelicula = txtPelicula.text!
         
-        urlPelicula = "http://www.omdbapi.com/?apikey=f7ceca1b&s=god"
+        urlPelicula = "https://www.omdbapi.com/?apikey=f7ceca1b&s=god"
         
         if pelicula != "" {
-            urlPelicula = "http://www.omdbapi.com/?apikey=f7ceca1b&s=\(pelicula)"
+            urlPelicula = "https://www.omdbapi.com/?apikey=f7ceca1b&s=\(pelicula)"
         }
         
         Alamofire.request(urlPelicula).responseJSON { response in
@@ -53,19 +68,16 @@ class ListaPeliculasController : UIViewController, UITableViewDataSource, UITabl
                                 DatosPeliculas.peliculas.append(Pelicula(nombre: nombrePelicula, id: idPelicula, año: añoPelicula, duracion: "", clasificacion: "", director: "", genero: ""))
                             }
                         }
+                        self.tvPeliculas.reloadData()
                     }
                 }
             }
+            
         }
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
-    }
-    
     
 }
