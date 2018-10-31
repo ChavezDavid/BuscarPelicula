@@ -34,6 +34,7 @@ class ListaPeliculasController : UIViewController, UITableViewDataSource, UITabl
     }
     
     @IBAction func doTapBuscar(_ sender: Any) {
+        
         pelicula = txtPelicula.text!
         
         urlPelicula = "https://www.omdbapi.com/?apikey=f7ceca1b&s=god"
@@ -48,6 +49,7 @@ class ListaPeliculasController : UIViewController, UITableViewDataSource, UITabl
                     self.encontrada = respuesta
                 }
                 if self.encontrada == "True" {
+                    DatosPeliculas.peliculas.removeAll()
                     if let buscar = dictRespuesta.value(forKey: "Search") as? NSArray {
                         for i in buscar{
                             if let dictResultado = i as? NSDictionary{
@@ -73,6 +75,13 @@ class ListaPeliculasController : UIViewController, UITableViewDataSource, UITabl
                 }
             }
             
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DetallePelicula" {
+            let destino = segue.destination as! PeliculaDetalle
+            destino.pelicula = DatosPeliculas.peliculas[(tvPeliculas.indexPathForSelectedRow?.row)!]
         }
     }
     
