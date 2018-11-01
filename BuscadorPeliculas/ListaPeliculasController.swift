@@ -40,7 +40,9 @@ class ListaPeliculasController : UIViewController, UITableViewDataSource, UITabl
         urlPelicula = "https://www.omdbapi.com/?apikey=f7ceca1b&s=god"
         
         if pelicula != "" {
+            pelicula = pelicula.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)!
             urlPelicula = "https://www.omdbapi.com/?apikey=f7ceca1b&s=\(pelicula)"
+            
         }
         
         Alamofire.request(urlPelicula).responseJSON { response in

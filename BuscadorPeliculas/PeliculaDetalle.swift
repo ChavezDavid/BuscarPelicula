@@ -25,7 +25,7 @@ class PeliculaDetalle : UIViewController {
     
     override func viewDidLoad() {
         if pelicula != nil{
-        urlPelicula = "https://www.omdbapi.com/?apikey=f7ceca1b&i=\(pelicula!.id)"
+            urlPelicula = "https://www.omdbapi.com/?apikey=f7ceca1b&i=\(pelicula!.id)"
         }
         print(urlPelicula)
         Alamofire.request(urlPelicula).responseJSON { response in
