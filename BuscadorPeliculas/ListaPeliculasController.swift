@@ -69,7 +69,7 @@ class ListaPeliculasController : UIViewController, UITableViewDataSource, UITabl
                                     idPelicula = id
                                 }
                                 
-                                DatosPeliculas.peliculas.append(Pelicula(nombre: nombrePelicula, id: idPelicula, año: añoPelicula, duracion: "", clasificacion: "", director: "", genero: ""))
+                                DatosPeliculas.peliculas.append(Pelicula(nombre: nombrePelicula, id: idPelicula, año: añoPelicula, duracion: "", clasificacion: "", director: "", genero: "", urlPoster: ""))
                             }
                         }
                         self.tvPeliculas.reloadData()

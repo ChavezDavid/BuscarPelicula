@@ -274,6 +274,9 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kp4-5p-7aX">
+                                <rect key="frame" x="16" y="238" width="343" height="409"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -283,23 +286,27 @@
                             <constraint firstItem="Eva-Dl-3XU" firstAttribute="leading" secondItem="SBQ-XL-LZr" secondAttribute="leading" constant="16" id="C3Y-7H-VRW"/>
                             <constraint firstItem="SBQ-XL-LZr" firstAttribute="trailing" secondItem="g3j-oa-aFe" secondAttribute="trailing" constant="16" id="CrM-SR-qtG"/>
                             <constraint firstItem="7dr-F7-5ci" firstAttribute="leading" secondItem="SBQ-XL-LZr" secondAttribute="leading" constant="16" id="DUF-sY-QST"/>
+                            <constraint firstItem="Kp4-5p-7aX" firstAttribute="top" secondItem="Eva-Dl-3XU" secondAttribute="bottom" constant="8" id="EuT-2b-eqR"/>
+                            <constraint firstItem="SBQ-XL-LZr" firstAttribute="bottom" secondItem="Kp4-5p-7aX" secondAttribute="bottom" constant="20" id="FiD-er-pE2"/>
                             <constraint firstItem="7dr-F7-5ci" firstAttribute="top" secondItem="xcD-s1-4is" secondAttribute="bottom" constant="8" id="GIY-rh-erb"/>
                             <constraint firstItem="g3j-oa-aFe" firstAttribute="leading" secondItem="SBQ-XL-LZr" secondAttribute="leading" constant="16" id="HZ7-hd-gfZ"/>
                             <constraint firstItem="SBQ-XL-LZr" firstAttribute="trailing" secondItem="7dr-F7-5ci" secondAttribute="trailing" constant="16" id="Ili-vt-rN8"/>
                             <constraint firstItem="SBQ-XL-LZr" firstAttribute="trailing" secondItem="xcD-s1-4is" secondAttribute="trailing" constant="16" id="JN7-5a-m81"/>
                             <constraint firstItem="SBQ-XL-LZr" firstAttribute="trailing" secondItem="r6Y-1g-6um" secondAttribute="trailing" constant="16" id="L9d-AE-3gn"/>
                             <constraint firstItem="SBQ-XL-LZr" firstAttribute="trailing" secondItem="fpb-Om-iDd" secondAttribute="trailing" constant="16" id="S3C-Dk-vAq"/>
+                            <constraint firstItem="Kp4-5p-7aX" firstAttribute="leading" secondItem="SBQ-XL-LZr" secondAttribute="leading" constant="16" id="S8t-At-sQR"/>
                             <constraint firstItem="xcD-s1-4is" firstAttribute="top" secondItem="fpb-Om-iDd" secondAttribute="bottom" constant="8" id="Z7f-63-kTv"/>
+                            <constraint firstItem="SBQ-XL-LZr" firstAttribute="trailing" secondItem="Kp4-5p-7aX" secondAttribute="trailing" constant="16" id="bk8-We-Hxd"/>
                             <constraint firstItem="r6Y-1g-6um" firstAttribute="leading" secondItem="SBQ-XL-LZr" secondAttribute="leading" constant="16" id="s3Z-zN-pBx"/>
                             <constraint firstItem="Eva-Dl-3XU" firstAttribute="top" secondItem="g3j-oa-aFe" secondAttribute="bottom" constant="8" id="sYs-qJ-qIL"/>
                             <constraint firstItem="fpb-Om-iDd" firstAttribute="top" secondItem="SBQ-XL-LZr" secondAttribute="top" id="spg-7l-6rW"/>
                             <constraint firstItem="g3j-oa-aFe" firstAttribute="top" secondItem="r6Y-1g-6um" secondAttribute="bottom" constant="8" id="usI-4M-qtr"/>
                             <constraint firstItem="SBQ-XL-LZr" firstAttribute="trailing" secondItem="Eva-Dl-3XU" secondAttribute="trailing" constant="16" id="w1R-sm-xtp"/>
-                            <constraint firstItem="SBQ-XL-LZr" firstAttribute="bottom" secondItem="Eva-Dl-3XU" secondAttribute="bottom" constant="437" id="zYR-oA-jPs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SBQ-XL-LZr"/>
                     </view>
                     <connections>
+                        <outlet property="imgPoster" destination="Kp4-5p-7aX" id="tRL-tX-fLH"/>
                         <outlet property="lblAño" destination="xcD-s1-4is" id="6MS-Bj-q1T"/>
                         <outlet property="lblClasificacion" destination="7dr-F7-5ci" id="v8h-1c-Sln"/>
                         <outlet property="lblDirector" destination="Eva-Dl-3XU" id="tPQ-8J-bvt"/>

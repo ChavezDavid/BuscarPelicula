@@ -17,8 +17,9 @@ class Pelicula {
     var clasificacion : String
     var director : String
     var genero : String
+    var urlPoster : String
     
-    init(nombre : String, id : String, año : String, duracion : String, clasificacion : String, director : String, genero : String){
+    init(nombre : String, id : String, año : String, duracion : String, clasificacion : String, director : String, genero : String, urlPoster : String){
         self.nombre = nombre
         self.id = id
         self.año = año
@@ -26,5 +27,6 @@ class Pelicula {
         self.clasificacion = clasificacion
         self.director = director
         self.genero = genero
+        self.urlPoster = urlPoster
     }
 }
